@@ -1,0 +1,114 @@
+Delivered-To: sid.the.manne@gmail.com
+Received: by 2002:a2e:864d:0:b0:3ae:27ed:c466 with SMTP id i13csp2111718ljj;
+        Mon, 23 Nov 2026 06:00:01 -0800 (PST)
+X-Received: by 2002:a05:620a:130e:b0:93a:2e8:5aff with SMTP id af79cd13be357-949ba9b452dmr2133011385a.21.1795442401569;
+        Mon, 23 Nov 2026 06:00:01 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1795442401; cv=none;
+        d=google.com; s=arc-20260327;
+        b=ldFxpOwQu1lK5PwCsiEapfhmJG1DZKNQ45vqlE0jaVIW0ZCAadbCwFJzIfjHHZ3GXM
+         aNIB0gTFYEqqMUdj5N65MdmP7XPKAG6cd/pGCHOXwcvWmK1HOst0aZ43cj2KJBUeq75Q
+         uz+4bA1Phnra4DAC5Az+p9DVXTnq7hFvPoi1QxjyB7inWlgbBXZQ9VJwRDpTWR5neUeC
+         S44Ro/byv2a5vrYZl4S962aLTd4NgB9mPat8+mvnU244b+8SvLBdOOp4bGNUcJ4IOoPP
+         1/Yoo93kLgROVgU3Et2AbPN39VCp2SHSRHTsTMUEKFjS2Yau8/KxL1b4W4xvAnHXm6Vn
+         Nduw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=mime-version:date:content-transfer-encoding:message-id:subject
+         :reply-to:to:from:sender:dkim-signature:dkim-signature;
+        bh=zc8S/gNokivOu829A2V64CjznUY1+VzpqaMxnmAA7Ic=;
+        fh=ycna0prXHsx1ufnYe53tyOr788zsNkWxJ1OHc3KNmqE=;
+        b=lKIuHw+Rqs1tGEGeOIEomf/TeoeAEg61XgqILloHv1KtlcAch9ZoQk2Z0lCdUXP8P2
+         AXjSxy34P0ZuejDTpxBSojAIEO+x7yiXnXL6DJEqRwpqBoaLPwcqlsHtUvA5Zz4gJofl
+         X8zW/ume/PyGCzvb6A4G/EcN3/Tbwm92uJfo+kD6uJ812AHxibPOwuis0GlNmUr7BhrM
+         UV4iwqhqgvr9VdYJpwrt00665evCKJL1vFyQbOTD/t598LaV2cyyIj0LAOeyjUhOMkrj
+         Xce54cxfbm4IJmLm25U8wcBes/QMZGDCxvvZqiQry6rNhe1yYZkh9qzUlTsuatKTh/zb
+         ITXQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail-codeinplace.stanford.edu header.s=smtp header.b=ohvIRC33;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=MokBZ1oF;
+       spf=pass (google.com: domain of bounce+dda54f.ab4fe15-sid.the.manne=gmail.com@mail-codeinplace.stanford.edu designates 69.72.42.14 as permitted sender) smtp.mailfrom="bounce+dda54f.ab4fe15-sid.the.manne=gmail.com@mail-codeinplace.stanford.edu";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=stanford.edu
+Return-Path: <bounce+dda54f.ab4fe15-sid.the.manne=gmail.com@mail-codeinplace.stanford.edu>
+Received: from v514.v51e342bd.use4.send.mailgun.net (v514.v51e342bd.use4.send.mailgun.net. [69.72.42.14])
+        by mx.google.com with UTF8SMTPS id af79cd13be357-949da92251dsi511128185a.269.2026.11.23.06.00.01
+        for <sid.the.manne@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 23 Nov 2026 06:00:01 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce+dda54f.ab4fe15-sid.the.manne=gmail.com@mail-codeinplace.stanford.edu designates 69.72.42.14 as permitted sender) client-ip=69.72.42.14;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail-codeinplace.stanford.edu header.s=smtp header.b=ohvIRC33;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=MokBZ1oF;
+       spf=pass (google.com: domain of bounce+dda54f.ab4fe15-sid.the.manne=gmail.com@mail-codeinplace.stanford.edu designates 69.72.42.14 as permitted sender) smtp.mailfrom="bounce+dda54f.ab4fe15-sid.the.manne=gmail.com@mail-codeinplace.stanford.edu";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=stanford.edu
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mail-codeinplace.stanford.edu; q=dns/txt; s=smtp; t=1795442400; x=1795449600;
+ h=Content-Type: MIME-Version: Date: Content-Transfer-Encoding: Message-ID: Subject: Subject: Reply-To: To: To: From: From: Sender: Sender: X-Feedback-Id;
+ bh=zc8S/gNokivOu829A2V64CjznUY1+VzpqaMxnmAA7Ic=;
+ b=ohvIRC339n5fylX1S789C/5+BqrsYWDceMrKvr28RgIcZSsU5R7snvJS5qByuWDh2erY/hpzRZXzgCgO8J05FzADlPNyB0vyWuQW6/wHVV6mXb0GUfAnTrxAEhJThXBFAu9V3xDwLqzHUILvIQ6Xq8Q/xR5uGujZ4OlhZkm2wrk=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1795442400; x=1795449600;
+ h=Content-Type: MIME-Version: Date: Content-Transfer-Encoding: Message-ID: Subject: Subject: Reply-To: To: To: From: From: Sender: Sender: X-Feedback-Id;
+ bh=zc8S/gNokivOu829A2V64CjznUY1+VzpqaMxnmAA7Ic=;
+ b=MokBZ1oFy6KJPpgMuJQoB9w0kmCESPdY2R8yAHhcZm0Rgf3hUqDdnNhOXR8teuxF2EXgrRM1F3EJBKZJvVSBqgHNu97f2lZL7yRyThSTM+GkVgRPo4vbVJ9cKV8f2QwLVfuqPaviLEAsbBzLgZAwT2LdyzGF5foysiA+JsDyIPk=
+X-Mailgun-Sid: WyI5NjFmYiIsInNpZC50aGUubWFubmVAZ21haWwuY29tIiwiYWI0ZmUxNSJd
+X-Feedback-Id: codeinplace@mail-codeinplace.stanford.edu::6452e47cdea048125e48e39c:mailgun
+Received: from [127.0.0.1] (unknown [136.124.32.148]) by
+ 6a2297b4f9a4659a3cef3c9cbaa2fca2c78cc9412b9f23b98b8f9b68358ab56c with SMTP id
+ 6b03b21b4da3ea5ec30a8279; Mon, 23 Nov 2026 03:25:15 GMT
+X-Mailgun-Sending-Ip: 69.72.42.14
+Sender: codeinplace@mail-codeinplace.stanford.edu
+X-Mailgun-Deliver-By: Mon, 23 Nov 2026 14:00:00 +0000
+From: Code in Place <codeinplace@mail-codeinplace.stanford.edu>
+To: sid.the.manne@gmail.com
+Reply-To: Code in Place <codeinplace@gmail.com>
+Subject: =?UTF-8?Q?=5BPAI=5D_Thank_you_for_a_wonderful_clas?=
+ =?UTF-8?Q?s_=F0=9F=92=99?=
+Message-ID:
+ <fbb2960b-970e-565e-8a0b-e6222c8bcf87@mail-codeinplace.stanford.edu>
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 23 Nov 2026 03:25:14 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello teaching team! You've taught the last section of the very first =
+Probability for AI. =F0=9F=8E=89
+
+A few notes:
+
+Leaderboards: the Covers =
+and Section ratings tabs on the leaderboards (https://pai.stanford.=
+edu/pai1/leaderboards) show how the whole team did.
+
+Your certificate: your progress is on the "Your certificate" card on your =
+PAI Home page: sections taught, shadow reviews and trainings. If something =
+looks off, post in the report forum (https://pai.stanford.edu/pai1/report).
+
+End of course survey: if you haven't yet, please fill out the section =
+leader end of course survey (https://pai.stanford.edu/pai1/survey/sl-end-of=
+-course). It takes about 5 minutes, and your answers will shape the next =
+PAI.
+
+Keep learning: the Keep learning page (https://pai.stanford.=
+edu/pai1/keeplearning) is now live for your students, including a shelf of =
+section leaders' own work.
+
+Thank you
+
+About 500 of you volunteered to =
+teach probability to about 10,600 students around the world, one of the =
+biggest math teaching teams ever assembled. Every week you learned a new =
+section, prepared it and taught it live, often to students meeting these =
+ideas for the first time. Together you held 2,643 sections over six weeks. =
+You looked out for each other too. When a leader couldn't make it, someone =
+stepped in: more than 200 covers, taught by more than 110 of you, so =
+students kept their section. Here in the Lounge you answered each other's =
+questions, shared your slides and tricks, and caught mistakes in our notes.=
+ Your students noticed. They left more than 10,000 ratings, and in the =
+final week they rated sections 4.71, the best of the course.
+
+Thank you, all of you. It has been a really special experience. If we do =
+this again, it would be wonderful to teach with you again.
+
+All the best,
+Chris
+
+This note is also in the Teachers Lounge: https://pai.stanford.=
+edu/pai1/teacherslounge?post=3Df59d405f-80c6-458e-8150-df62f0522d31

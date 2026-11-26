@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LessonWorld: sample lessons</title>
+<style>
+  :root { --ink:#1d1c3a; --muted:#6b6a80; --line:#e6e4ee; --bg:#fafafc; --card:#fff; --accent:#b11928; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#ecebf5; --muted:#a3a2b8; --line:#33324a; --bg:#15141f; --card:#1e1d2b; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 -apple-system, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 40px 20px 60px; }
+  h1 { font: 600 30px Georgia, serif; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .how { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 26px; font-size: 15px; }
+  .how b { color: var(--ink); }
+  kbd { font: 12px ui-monospace, Menlo, monospace; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--bg); }
+  .note { color: var(--muted); font-size: 14px; margin: -12px 0 22px; }
+  .note code { font: 13px ui-monospace, Menlo, monospace; }
+  .file { color: var(--muted); font: 12px ui-monospace, Menlo, monospace; margin-top: 6px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+  a.card { display: block; height: 100%; text-decoration: none; color: inherit; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; transition: border-color .15s, transform .15s; }
+  a.card:hover, a.card:focus-visible { border-color: var(--accent); transform: translateY(-1px); outline: none; }
+  .subj { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  .t { font: 600 19px Georgia, serif; margin: 4px 0 8px; }
+  .src { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>LessonWorld: sample lessons</h1>
+  <p class="sub">CVPR 2027 Submission #4493 · Supplementary material · Six lessons from the studies, numbered as in the topics table (Sec. E.1)</p>
+  <div class="how">
+    Click a lesson to open it. Each lesson is one self-contained file; nothing to install and no server.
+    Press <b>Play</b>: <kbd>Space</kbd> pauses, <kbd>→</kbd>/<kbd>←</kbd> step, <kbd>1</kbd>–<kbd>4</kbd> answer,
+    <kbd>T</kbd> enlarges the figure, and <kbd>L</kbd> opens the map.
+    Opened from disk, a lesson has no Tutor, which needs a model API; the video shows it.
+  </div>
+  <p class="note">If your browser blocks a link (for example, a file-access message on macOS), open the lesson file directly from this <code>lessons</code> folder: each file below works on its own.</p>
+  <ul>
+    <li><a class="card" href="01_insertion-sort.html"><div class="subj">Topic 1 · Computer science</div><div class="t">One Key at a Time</div><div class="src">After Cormen et al., <i>Introduction to Algorithms</i> (3rd ed.), Fig. 2.2</div><div class="file">01_insertion-sort.html</div></a></li>
+    <li><a class="card" href="03_diffusion-unet.html"><div class="subj">Topic 3 · Computer science</div><div class="t">The Denoising U</div><div class="src">After Prince, <i>Understanding Deep Learning</i> (2023), Fig. 18.9</div><div class="file">03_diffusion-unet.html</div></a></li>
+    <li><a class="card" href="12_double-integral-limits.html"><div class="subj">Topic 12 · Mathematics</div><div class="t">The Floor Under the Roof</div><div class="src">After Anton, Bivens and Davis, <i>Calculus</i> (10th ed.), Fig. 14.2.10</div><div class="file">12_double-integral-limits.html</div></a></li>
+    <li><a class="card" href="13_polar-double-integral.html"><div class="subj">Topic 13 · Mathematics</div><div class="t">Between a Circle and a Cardioid</div><div class="src">After Anton, Bivens and Davis, <i>Calculus</i> (10th ed.), Fig. 14.3.10</div><div class="file">13_polar-double-integral.html</div></a></li>
+    <li><a class="card" href="16_simple-pendulum.html"><div class="subj">Topic 16 · Physics</div><div class="t">The Pendulum's Beat</div><div class="src">From OpenStax <i>University Physics</i> Vol. 1, §15.4, Fig. 15.20</div><div class="file">16_simple-pendulum.html</div></a></li>
+    <li><a class="card" href="25_fuel-cell.html"><div class="subj">Topic 25 · Chemistry</div><div class="t">Current from Hydrogen</div><div class="src">After OpenStax <i>Chemistry 2e</i>, Fig. 1.16</div><div class="file">25_fuel-cell.html</div></a></li>
+  </ul>
+</main>
+</body>
+</html>
